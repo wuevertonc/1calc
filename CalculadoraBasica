@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <locale.h> //biblioteca de caracteres especiais
 float n1, n2, res;
-int op;
+int op;//necessário ser int
 int main()
 {
 	setlocale(LC_ALL, "Portuguese");//definir os caracteres no padrão português
