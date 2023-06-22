@@ -1,0 +1,17 @@
+//calcular potenciação 
+#include<stdio.h>
+#include<locale.h>
+int base, expo,res, i;
+int main(){
+	setlocale(LC_ALL,"portuguese");
+	printf("digite a base:");
+	scanf("%i",&base);
+	printf("digite o expoente:");
+	scanf("%i",&expo);
+	res=1;
+	for(i=0;i<expo;i++){
+		res=res*base;
+	}
+	printf("o resultado é %i",res);
+	return 0;
+}
