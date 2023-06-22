@@ -1,0 +1,15 @@
+//programa deve calcular o aumento de salário de um funcionário
+#include<stdio.h>
+#include<locale.h>
+float sal, perc;
+int main(){
+	setlocale(LC_ALL, "portuguese");
+	printf("digite o salario do funcionario:");
+	scanf("%f",&sal);
+	printf("digite o percentual de aumento:");
+	scanf("%f",&perc);
+	perc=perc/100;
+	sal=sal+(sal*perc);
+	printf("O novo salário é R$%.2f",sal);
+	return 0;
+}
