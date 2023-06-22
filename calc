@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <locale.h> //biblioteca de caracteres especiais
+float n1, n2, res;
+int op;
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");//definir os caracteres no padrão português
+    printf("digite o primeiro número:");
+    scanf("%f", &n1);
+    printf("digite o segundo número:");
+    scanf("%f", &n2);
+    printf("qual tipo de operação deseja realizar?\n1-soma\n2-subtração\n3-multiplicação\n4-divisão\n");
+    scanf("%i", &op);
+    	
+    switch(op){
+	case 1:
+		res=n1+n2;
+		break;
+		
+	case 2:
+		res=n1-n2;
+		break;
+		
+	case 3:
+		res=n1*n2;
+		break;
+	
+	case 4:
+		if (n2!=0){
+		res=n1/n2;
+	}
+		else {
+			printf("inválido");
+		}
+		break;
+		
+	Default: 
+		printf("inválido");
+	}
+	printf("o resultado é %f", res);
+    return 0;
+}
