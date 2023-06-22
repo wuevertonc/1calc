@@ -1,0 +1,17 @@
+//programa deve somar números até o usuário digitar algo diferente de s
+#include<stdio.h>
+#include<locale.h>
+int num, soma=0;
+char op;
+int main(){
+	setlocale(LC_ALL,"portuguese");
+	do{
+		printf("digite o número que deseja somar:");
+		scanf("%i",&num);
+		soma=soma+num;
+		printf("deseja somar mais algum número?\n S ou N\n(em caso de entrada diferente o programa será encerrado.)\n");
+		scanf("%s",&op);
+	}while(op=='S' || op=='s');
+	printf("o resultado da soma é %i",soma);
+	return 0;
+}
