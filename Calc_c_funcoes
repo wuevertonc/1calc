@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<locale.h>
+float n1,n2, res;
+int op;
+
+//inicio das funções
+//função soma
+float soma(float n1, float n2){
+	float res;
+	res=n1+n2;
+	return res;
+}
+//função subtração
+float sub(float n1, float n2){
+	float res;
+	res=n1-n2;
+	return res;
+}
+//função multiplicação
+float mult(float n1, float n2){
+	float res;
+	res=n1*n2;
+	return res;
+}
+//função divisão
+float div(float n1, float n2){
+	float res;
+	if(n2==0){
+		printf("não é possível dividir por 0");
+		return 0;
+	}
+	if(n2!=0){
+		res=n1/n2;
+		return res;
+	}
+}
+
+//inicio main
+int main(){
+	setlocale(LC_ALL, "portuguese");
+	printf("qual operação deseja realizar?\n1-Soma\n2-subtração\n3-multiplicação\n4-divisão\n5-potenciação\n");
+	scanf("%i",&op);
+	printf("digite os dois números da operação:");
+	scanf("%f",&n1);
+	scanf("%f",&n2);
+		switch(op){
+			case 1:
+				res=soma(n1,n2);
+				break;
+			case 2:
+				res=sub(n1,n2);
+				break;
+			case 3: 
+				res=mult(n1,n2);
+				break;
+			case 4:
+				res=div(n1,n2);
+				break;
+
+		}	
+	printf("o resultado é %f",res);
+	return 0;
+}
